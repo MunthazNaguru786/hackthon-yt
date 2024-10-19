@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Course Selection and Teacher Assignment System</h1>
+
+        <!-- Step 1: Course Selection -->
+        <section id="course-selection" class="mt-5">
+            <h2>Select Courses</h2>
+            <div id="courseSelectionForm" class="row">
+                <!-- Courses will be displayed dynamically here -->
+            </div>
+            <form id="course-selection-form">
+                <input type="text" id="studentId" placeholder="Student ID" required>
+                <input type="text" id="courseId" placeholder="Course ID" required>
+                <input type="text" id="teacherId" placeholder="Teacher ID" required>
+                <input type="text" id="semester" placeholder="Semester" required>
+                <button type="submit">Select Course</button>
+            </form>
+        </section>
+
+        <!-- Step 2: Teacher Assignment -->
+        <section id="teacher-assignment" class="mt-5">
+            <h2>Teacher Assignment for Selected Courses</h2>
+            <div id="teacherAssignment" class="row">
+                <!-- Teacher assignment options will appear here after course selection -->
+            </div>
+        </section>
+
+        <!-- Step 3: Feedback Submission -->
+        <section id="feedback-section" class="mt-5">
+            <h2>Submit Feedback</h2>
+            <form id="feedbackForm" class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="teacherFeedback" class="form-label">Feedback</label>
+                    <textarea id="teacherFeedback" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="teacherRating" class="form-label">Rating (1-5)</label>
+                    <input type="number" id="teacherRating" class="form-control" min="1" max="5" required>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
